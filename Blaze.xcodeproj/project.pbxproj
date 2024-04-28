@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A120BF82BDE1A9600D6F408 /* BlazeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BF72BDE1A9600D6F408 /* BlazeNetworkManager.swift */; };
+		8A120BFA2BDE1B0800D6F408 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BF92BDE1B0800D6F408 /* HttpMethods.swift */; };
+		8A120BFD2BDE1BD700D6F408 /* BlazeNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BFC2BDE1BD700D6F408 /* BlazeNetworkError.swift */; };
+		8A120C002BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BFF2BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift */; };
+		8A120C022BDE1D9A00D6F408 /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C012BDE1D9A00D6F408 /* ApiPath.swift */; };
+		8A120C042BDE220B00D6F408 /* BlazeNetworkRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C032BDE220B00D6F408 /* BlazeNetworkRequestObject.swift */; };
+		8A120C062BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C052BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift */; };
+		8A120C082BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C072BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift */; };
+		8A120C0A2BDE3F8900D6F408 /* Blaze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C092BDE3F8900D6F408 /* Blaze.swift */; };
 		8A9912002BDD360A0000497E /* Blaze.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8A9911FF2BDD360A0000497E /* Blaze.docc */; };
 		8A9912062BDD360A0000497E /* Blaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9911FB2BDD360A0000497E /* Blaze.framework */; };
 		8A99120B2BDD360A0000497E /* BlazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99120A2BDD360A0000497E /* BlazeTests.swift */; };
@@ -24,6 +33,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A120BF72BDE1A9600D6F408 /* BlazeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkManager.swift; sourceTree = "<group>"; };
+		8A120BF92BDE1B0800D6F408 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		8A120BFC2BDE1BD700D6F408 /* BlazeNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkError.swift; sourceTree = "<group>"; };
+		8A120BFF2BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkProtocol.swift; sourceTree = "<group>"; };
+		8A120C012BDE1D9A00D6F408 /* ApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
+		8A120C032BDE220B00D6F408 /* BlazeNetworkRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkRequestObject.swift; sourceTree = "<group>"; };
+		8A120C052BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkRequestObjectProtocol.swift; sourceTree = "<group>"; };
+		8A120C072BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlazeNetworkManager+Extension.swift"; sourceTree = "<group>"; };
+		8A120C092BDE3F8900D6F408 /* Blaze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blaze.swift; sourceTree = "<group>"; };
 		8A9911FB2BDD360A0000497E /* Blaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Blaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9911FE2BDD360A0000497E /* Blaze.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blaze.h; sourceTree = "<group>"; };
 		8A9911FF2BDD360A0000497E /* Blaze.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Blaze.docc; sourceTree = "<group>"; };
@@ -50,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A120BFE2BDE1D3B00D6F408 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A120BFF2BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift */,
+				8A120C052BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		8A9911F12BDD360A0000497E = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +98,16 @@
 		8A9911FD2BDD360A0000497E /* Blaze */ = {
 			isa = PBXGroup;
 			children = (
+				8A120BFE2BDE1D3B00D6F408 /* protocols */,
 				8A9911FE2BDD360A0000497E /* Blaze.h */,
 				8A9911FF2BDD360A0000497E /* Blaze.docc */,
+				8A120BF72BDE1A9600D6F408 /* BlazeNetworkManager.swift */,
+				8A120C032BDE220B00D6F408 /* BlazeNetworkRequestObject.swift */,
+				8A120BF92BDE1B0800D6F408 /* HttpMethods.swift */,
+				8A120BFC2BDE1BD700D6F408 /* BlazeNetworkError.swift */,
+				8A120C012BDE1D9A00D6F408 /* ApiPath.swift */,
+				8A120C072BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift */,
+				8A120C092BDE3F8900D6F408 /* Blaze.swift */,
 			);
 			path = Blaze;
 			sourceTree = "<group>";
@@ -194,7 +229,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A120BFD2BDE1BD700D6F408 /* BlazeNetworkError.swift in Sources */,
+				8A120C082BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift in Sources */,
+				8A120C002BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift in Sources */,
 				8A9912002BDD360A0000497E /* Blaze.docc in Sources */,
+				8A120C042BDE220B00D6F408 /* BlazeNetworkRequestObject.swift in Sources */,
+				8A120C062BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift in Sources */,
+				8A120C0A2BDE3F8900D6F408 /* Blaze.swift in Sources */,
+				8A120C022BDE1D9A00D6F408 /* ApiPath.swift in Sources */,
+				8A120BF82BDE1A9600D6F408 /* BlazeNetworkManager.swift in Sources */,
+				8A120BFA2BDE1B0800D6F408 /* HttpMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +455,7 @@
 		8A9912132BDD360A0000497E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZWP9XW897T;
@@ -427,6 +472,7 @@
 		8A9912142BDD360A0000497E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZWP9XW897T;
