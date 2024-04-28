@@ -14,4 +14,20 @@ A networking library made using `Swift` on top of `URLSession`, this allows to q
 - Adding interceptors
 
 
+### How to use
+
+```swift
+
+import Blaze
+
+Blaze.initialise(with: <base_url_here>)
+Blaze.setDefaultHeader(headers_here)
+
+// to make get call
+Blaze.get("/endpoint", completion)
+```
+
+This is how to use this module in order to make network request
+
+
 Made with ❤️ using `Swift`
