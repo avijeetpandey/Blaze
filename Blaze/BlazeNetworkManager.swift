@@ -25,7 +25,7 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
     }
     
     // MARK: - base function to send network request
-    internal func sendRequest<T: Codable>(with networkObject: any BlazeNetworkRequestObjectProtocol,
+    internal func sendRequest<T: Codable>(with networkObject: BlazeNetworkRequestObjectProtocol,
                                  completion: @escaping (Result<T, BlazeNetworkError>) -> Void) {
         
         // in case if the URL is not a valid one
