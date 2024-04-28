@@ -25,8 +25,8 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
     }
     
     // MARK: - base function to send network request
-    internal func sendRequest<T>(with networkObject: any BlazeNetworkRequestObjectProtocol,
-                                 completion: @escaping (Result<T, BlazeNetworkError>) -> Void) where T : Decodable, T : Encodable {
+    internal func sendRequest<T: Codable>(with networkObject: any BlazeNetworkRequestObjectProtocol,
+                                 completion: @escaping (Result<T, BlazeNetworkError>) -> Void) {
         
         // in case if the URL is not a valid one
         guard let baseUrl = _baseURL else {
@@ -34,7 +34,7 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
             return
         }
         
-        let completeUrl = "\(baseUrl)/\(networkObject.url)"
+        let completeUrl = "\(baseUrl)\(networkObject.url)"
         
         guard let url = URL(string: completeUrl) else {
             completion(.failure(.invalidURL))
@@ -84,14 +84,14 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
     }
     
     // MARK: - GET call
-    func get<T: Codable>(endPoint: String,
+    public func get<T: Codable>(endPoint: String,
                          completion: @escaping (Result<T, BlazeNetworkError>) -> Void) {
         let networkRequestObject: BlazeNetworkRequestObject = .init(url: endPoint, method: .get)
         self.sendRequest(with: networkRequestObject, completion: completion)
     }
     
     // MARK: - POST call
-    func post<T: Codable>(endPoint: String,
+    public func post<T: Codable>(endPoint: String,
                           data: [String: Any],
                           completion: @escaping (Result<T, BlazeNetworkError>) -> Void) {
         
@@ -101,7 +101,7 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
         self.sendRequest(with: networkRequestObject, completion: completion)
     }
     
-    func put<T: Codable>(endPoint: String,
+    public func put<T: Codable>(endPoint: String,
                          data: [String: Any],
                          completion: @escaping (Result<T, BlazeNetworkError>) -> Void) {
         
