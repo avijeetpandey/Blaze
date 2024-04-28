@@ -20,6 +20,10 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
     // MARK: - Init
     private init() { }
     
+    public func initialise(with baseUrl: String) {
+        _baseURL = baseUrl
+    }
+    
     // MARK: - base function to send network request
     internal func sendRequest<T>(with networkObject: any BlazeNetworkRequestObjectProtocol,
                                  completion: @escaping (Result<T, BlazeNetworkError>) -> Void) where T : Decodable, T : Encodable {
