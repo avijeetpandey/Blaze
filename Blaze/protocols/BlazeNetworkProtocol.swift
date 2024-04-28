@@ -18,3 +18,7 @@ public protocol BlazeAuthorizationProtocol {
     func setAuthorization(with token: String)
     mutating func appendHeader(key: String, value: String)
 }
+
+public protocol BlazeNetworkTaskProtocol {
+    func cancelTask()
+}

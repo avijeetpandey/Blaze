@@ -11,7 +11,6 @@
 		8A120BFA2BDE1B0800D6F408 /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BF92BDE1B0800D6F408 /* HttpMethods.swift */; };
 		8A120BFD2BDE1BD700D6F408 /* BlazeNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BFC2BDE1BD700D6F408 /* BlazeNetworkError.swift */; };
 		8A120C002BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120BFF2BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift */; };
-		8A120C022BDE1D9A00D6F408 /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C012BDE1D9A00D6F408 /* ApiPath.swift */; };
 		8A120C042BDE220B00D6F408 /* BlazeNetworkRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C032BDE220B00D6F408 /* BlazeNetworkRequestObject.swift */; };
 		8A120C062BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C052BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift */; };
 		8A120C082BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A120C072BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift */; };
@@ -37,7 +36,6 @@
 		8A120BF92BDE1B0800D6F408 /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		8A120BFC2BDE1BD700D6F408 /* BlazeNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkError.swift; sourceTree = "<group>"; };
 		8A120BFF2BDE1D4E00D6F408 /* BlazeNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkProtocol.swift; sourceTree = "<group>"; };
-		8A120C012BDE1D9A00D6F408 /* ApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
 		8A120C032BDE220B00D6F408 /* BlazeNetworkRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkRequestObject.swift; sourceTree = "<group>"; };
 		8A120C052BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlazeNetworkRequestObjectProtocol.swift; sourceTree = "<group>"; };
 		8A120C072BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BlazeNetworkManager+Extension.swift"; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				8A120C032BDE220B00D6F408 /* BlazeNetworkRequestObject.swift */,
 				8A120BF92BDE1B0800D6F408 /* HttpMethods.swift */,
 				8A120BFC2BDE1BD700D6F408 /* BlazeNetworkError.swift */,
-				8A120C012BDE1D9A00D6F408 /* ApiPath.swift */,
 				8A120C072BDE3A7200D6F408 /* BlazeNetworkManager+Extension.swift */,
 				8A120C092BDE3F8900D6F408 /* Blaze.swift */,
 			);
@@ -236,7 +233,6 @@
 				8A120C042BDE220B00D6F408 /* BlazeNetworkRequestObject.swift in Sources */,
 				8A120C062BDE222B00D6F408 /* BlazeNetworkRequestObjectProtocol.swift in Sources */,
 				8A120C0A2BDE3F8900D6F408 /* Blaze.swift in Sources */,
-				8A120C022BDE1D9A00D6F408 /* ApiPath.swift in Sources */,
 				8A120BF82BDE1A9600D6F408 /* BlazeNetworkManager.swift in Sources */,
 				8A120BFA2BDE1B0800D6F408 /* HttpMethods.swift in Sources */,
 			);

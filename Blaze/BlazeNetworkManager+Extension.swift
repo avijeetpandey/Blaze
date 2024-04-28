@@ -25,3 +25,9 @@ extension BlazeNetworkManager: BlazeAuthorizationProtocol {
     }
 }
 
+// MARK: - adding functionality to cancel the task
+extension BlazeNetworkManager: BlazeNetworkTaskProtocol {
+    public func cancelTask() {
+        _task?.cancel()
+    }
+}

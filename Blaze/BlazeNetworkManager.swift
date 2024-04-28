@@ -12,16 +12,25 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
     internal var _baseURL: String?
     internal var _authorizationToken: String?
     internal var _headers = [String: String]()
+    internal var _task: URLSessionDataTask?
     
     static let shared = BlazeNetworkManager()
-
+    
     // MARK: - Init
     private init() { }
     
-    internal func sendRequest<T>(with networkObject: any BlazeNetworkRequestObjectProtocol, completion: @escaping (Result<T, BlazeNetworkError>) -> Void) where T : Decodable, T : Encodable {
+    internal func sendRequest<T>(with networkObject: any BlazeNetworkRequestObjectProtocol,
+                                 completion: @escaping (Result<T, BlazeNetworkError>) -> Void) where T : Decodable, T : Encodable {
         
         // in case if the URL is not a valid one
-        guard let url = URL(string: networkObject.url) else {
+        guard let baseUrl = _baseURL else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        let completeUrl = "\(baseUrl)/\(networkObject.url)"
+        
+        guard let url = URL(string: completeUrl) else {
             completion(.failure(.invalidURL))
             return
         }
@@ -37,6 +46,35 @@ public class BlazeNetworkManager: BlazeNetworkProtocol {
         request.httpMethod = networkObject.method.rawValue
         request.httpBody = networkObject.body
         
+        _task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error  {
+                completion(.failure(.requestFailed(error)))
+                return
+            }
+            
+            // checking for a valid response
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            // extracting data from the url response body
+            guard let data = data else {
+                completion(.failure(.invalidResponse))
+                return
+            }
+            
+            // decoding data
+            do {
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedData))
+            } catch(let error) {
+                completion(.failure(.decodingFailed(error)))
+            }
+        }
+        
+        _task?.resume()
     }
 }
 
