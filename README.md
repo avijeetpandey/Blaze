@@ -21,7 +21,10 @@ A networking library made using `Swift` on top of `URLSession`, this allows to q
 import Blaze
 
 Blaze.initialise(with: <base_url_here>)
-Blaze.setDefaultHeader(headers_here)
+Blaze.setDefaultHeader(<headers_here>)
+
+// if you have auth
+Blaze.setAuthorization(<token_here>)
 
 // to make get call
 Blaze.get("/endpoint", completion)
